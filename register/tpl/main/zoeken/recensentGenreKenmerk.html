@@ -1,0 +1,63 @@
+<!-- START BLOCK : zoek -->
+<strong>Zoek recensenten adh van kenmerken en genre's </strong><br>
+<br>
+<form name="zoekRecensent" method="get" action="" style="display:inline;">
+<table width="700" border="0">
+  <tr>
+    <td width="50%"><strong>Kenmerken</strong></td>
+    <td width="50%"><strong>Genres</strong></td>
+  </tr>
+  <tr>
+    <td colspan="2"><hr color=blue></td>
+  </tr>
+  <tr>
+    <td><input type="checkbox" id="checkallnone" name="checkallnone" value="checkbox" onclick="checkUncheck(document.zoekRecensent.kenmerk,this)" /> Selecteer/Deselecteer<hr color="blue" /></td>
+	<td><input type="checkbox" id="checkallnone" name="checkallnone" value="checkbox" onclick="checkUncheck(document.zoekRecensent.genre,this)" /> Selecteer/Deselecteer<hr color="blue" /></td>
+<!-- START BLOCK : zoek.row -->
+  <tr>
+    <td>
+<!-- START BLOCK : zoek.row.kenmerk -->
+	<input name="kenmerk[{kenmerk_id}]" type="checkbox" id="kenmerk" value="true">{kenmerk}
+<!-- END BLOCK : zoek.row.kenmerk -->	
+	</td>
+    <td>
+<!-- START BLOCK : zoek.row.genre -->
+	<input name="genre[{genre_id}]" type="checkbox" id="genre" value="true">{genre}
+<!-- END BLOCK : zoek.row.genre -->	
+	</td>
+  </tr>
+<!-- END BLOCK : zoek.row -->  
+</table>
+<br>
+<input type="submit" value=" Zoek &gt; ">
+<input name="zoek" type="hidden" id="zoek" value="true">
+</form>
+<!-- END BLOCK : zoek -->
+<!-- START BLOCK : result -->
+<table width="700"  border="0">
+  <tr>
+    <td colspan="2"><strong>Resultaten</strong>: er zijn {i_recensent} recensenten gevonden<strong><br>
+      <br>
+    </strong></td>
+  </tr>
+  <tr>
+    <td width="30">Nr</td>
+    <td>Recensent</td>
+  </tr>
+  <tr>
+    <td colspan="2"><hr color=blue></td>
+  </tr>
+<!-- START BLOCK : result.row -->  
+  <tr>
+    <td>{nr}</td>
+    <td><a href="{url}main/recensent.php?recensent={id}">{recensent}</a></td>
+  </tr>
+<!-- END BLOCK : result.row -->
+<!-- START BLOCK : result.norow -->  
+  <tr>
+	<td colspan="2">Er konden geen recensenten gevonden worden</td>
+  </tr>
+<!-- END BLOCK : result.norow -->    
+    
+</table>
+<!-- END BLOCK : result -->

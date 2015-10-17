@@ -1,0 +1,88 @@
+<table width="700" border="0">
+  <tr>
+    <td colspan="2"><strong><a href="{url}main/artiest.php?artiest={artiest_id}">{artiest}</a> - {album}<br>
+      <br>
+    </strong></td>
+  </tr>
+  <tr>
+    <td width="35%">      Jaar
+      <br>
+      Titelnummer      <br> 
+      Muzieklijstjes<br>
+      All music<br>
+    </td>
+    <td>      {jaar}<br>
+      {titelnummer}<br>
+      <a target="_blank" href="{url_muzieklijstjes}">{url_muzieklijstjes}</a><br>
+      <a target="_blank" href="http://www.allmusic.com/cg/amg.dll?p=amg&sql=2:{album}">link</a></td>
+  </tr>
+</table>
+<!-- START BLOCK : album_recensie -->
+<br>
+<br>
+<table width="700" border="0">
+  <tr>
+    <td colspan="6"><strong>Recensies<br>
+      <br>
+    </strong></td>
+  </tr>
+  <tr>
+    <td width="30">Nr</td>
+    <td width="30">Ts <a href="{url}main/album.php?album={album_id}&rOrder=tijdschrift">^</a></td>
+    <td width="100">Jaar/Nr <a href="{url}main/album.php?album={album_id}&rOrder=jaargave">^</a></td>
+    <td width="150">Rubriek <a href="{url}main/album.php?album={album_id}&rOrder=rubriek">^</a></td>
+    <td width="290">Recensent <a href="{url}main/album.php?album={album_id}&rOrder=recensent">^</a></td>
+    <td width="80">Waardering <a href="{url}main/album.php?album={album_id}&rOrder=waardering">^</a></td>
+  </tr>
+  <tr>
+    <td colspan="6"><hr color=blue></td>
+  </tr>
+<!-- START BLOCK : album_recensie.row -->
+  <tr>
+    <td>{nr}</td>
+    <td><acronym title="{tijdschrift}">{aTijdschrift}</acronym></td>
+    <td><a href="{url}main/nummer.php?nummer={nummer}&jaar={jaar}&tijdschrift={tijdschrift_id}">{jaar} / {nummer}</a></td>
+    <td>{rubriek}</td>
+    <td><a href="{url}main/recensent.php?recensent={recensent_id}" title="{recensent}">{recensent}</a></td>
+    <td>{waardering}</td>
+  </tr>
+<!-- END BLOCK : album_recensie.row -->
+</table>
+<!-- END BLOCK : album_recensie -->
+<!-- START BLOCK : album_lijst -->
+<br>
+<br>
+<br>
+<table width="700" border="0">
+  <tr>
+    <td colspan="8"><strong>Genoemd in muzieklijstjes<br>
+      <br>
+    </strong></td>
+  </tr>
+  <tr>
+    <td width="30">Nr</td>
+    <td width="85">Bron <a href="{url}main/album.php?album={album_id}&order=bron">^</a></td>
+    <td width="50">Jaar <a href="{url}main/album.php?album={album_id}&order=jaar">^</a></td>
+    <td width="380">Muzieklijstjes <a href="{url}main/album.php?album={album_id}&order=lijst">^</a></td>
+    <td width="65">Canon <a href="{url}main/album.php?album={album_id}&order=canon">^</a></td>
+    <td width="30">AK</td>
+    <td width="30">Pos</td>
+    <td width="30">gPos</td>
+  </tr>
+  <tr>
+    <td colspan="8"><hr color=blue></td>
+  </tr>
+<!-- START BLOCK : album_lijst.row -->  
+  <tr>
+    <td>{nr}</td>
+    <td><acronym title="{bron}">{aBron}</acronym></td>
+    <td>{jaar}</td>
+    <td><a href="{url}main/lijst.php?lijst={lijst_id}">{lijst}</a></td>
+    <td><div align="center">{canon}</div></td>
+    <td>{ak}</td>
+    <td>{pos}</td>
+    <td>{gPos}</td>
+  </tr>
+<!-- END BLOCK : album_lijst.row -->
+</table>
+<!-- END BLOCK : album_lijst -->

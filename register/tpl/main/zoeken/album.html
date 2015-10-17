@@ -1,0 +1,35 @@
+<strong>Zoeken op album<br> 
+</strong><br>
+<table width="700"  border="0">
+  <tr>
+    <td colspan="6"><strong>Resultaten</strong>: er zijn {i_album} albums gevonden<strong> </strong><br>
+    <br></td>
+  </tr>
+  <tr>
+    <td width="30">Nr</td>
+    <td width="260">Artiest <a href="{url}main/zoeken/album.php?album={vAlbum}&order=artiest">^</a></td>
+    <td width="275">Album <a href="{url}main/zoeken/album.php?album={vAlbum}&order=album">^</a></td>
+    <td width="50">Jaar <a href="{url}main/zoeken/album.php?album={vAlbum}&order=jaar">^</a></td>
+    <td width="40"><div align="center">Rec <a href="{url}main/zoeken/album.php?album={vAlbum}&order=recensies">^</a></div></td>
+    <td width="45"><div align="center">Verm <a href="{url}main/zoeken/album.php?album={vAlbum}&order=lijsten">^</a></div></td>
+  </tr>
+  <tr>
+    <td colspan="6"><hr color=blue></td>
+  </tr>
+<!-- START BLOCK : album.row -->  
+  <tr>
+    <td>{nr}</td>
+    <td><a href="{url}main/artiest.php?artiest={artiest_id}">{artiest}</a></td>
+    <td><a href="{url}main/album.php?album={album_id}">{album}</a></td>
+    <td>{jaar}</td>
+    <td><div align="center">{recensies}</div></td>
+    <td><div align="center">{lijsten}</div></td>
+  </tr>
+<!-- END BLOCK : album.row -->
+<!-- START BLOCK : album.norow -->  
+  <tr>
+	<td colspan="6">Er konden geen albums gevonden worden</td>
+  </tr>
+<!-- END BLOCK : album.norow -->    
+    
+</table>

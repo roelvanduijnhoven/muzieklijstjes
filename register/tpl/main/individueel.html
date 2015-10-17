@@ -1,0 +1,33 @@
+<!-- START BLOCK : individueel -->
+<table width="700" border="0">
+  <tr>
+    <td width="30">Nr</td>
+    <td width="50">Pos <a href="?recensent={recensent_id}&lijst={lijst_id}&order=pos">^</a></td>
+    <td width="250">Artiest <a href="?recensent={recensent_id}&lijst={lijst_id}&order=artiest">^</a></td>
+    <td width="300">Titel <a href="?recensent={recensent_id}&lijst={lijst_id}&order=album">^</a></td>
+    <td width="70">Jaar <a href="?recensent={recensent_id}&lijst={lijst_id}&order=jaar">^</a></td>
+  </tr>
+  <tr>
+    <td colspan="5"><hr color=blue></td>
+  </tr>  
+<!-- START BLOCK : individueel.newgroup -->
+ <tr>
+ 	<td colspan="6"><strong><a href="{url}main/lijst.php?lijst={lijstB_id}">{lijst}</a></strong></td>
+ <tr>
+ 	<td colspan="6"><hr color=blue></td></tr>
+ </tr>
+<!-- START BLOCK : individueel.row -->  
+ <tr>
+    <td>{nr}</td>
+    <td><strong>{pos}</strong></td>
+    <td><a href="{url}main/artiest.php?artiest={artiest_id}">{artiest}</a></td>
+    <td><a href="{url}main/album.php?album={album_id}">{album}</a></td>
+    <td>{jaar}</td>
+  </tr>
+<!-- END BLOCK : individueel.row -->
+ <tr>
+ 	<td colspan="6">&nbsp;</td></tr>
+ </tr>
+<!-- END BLOCK : individueel.newgroup -->
+</table>
+<!-- END BLOCK : individueel -->

@@ -1,0 +1,25 @@
+<strong>Muziekcanon </strong>(titels die in twee of meer geselecteerde lijsten genoemd worden) <br>
+<br>
+<table width="700" border="0">
+  <tr>
+  	<td width="30">Nr</td>
+    <td width="30">Pos</td>
+    <td width="30">AK <a href="{url}main/canon.php">^</a></td>
+    <td width="260">Artiest <a href="?order=artiest">^</a></td>
+    <td width="300">Album<a href="?order=titel">^</a></td>
+    <td width="50">Jaar <a href="?order=jaar">^</a></td>
+  </tr>
+  <tr>
+    <td colspan="6"><hr color=blue></td>
+  </tr>
+<!-- START BLOCK : canon.row -->
+  <tr>
+    <td>{nr}</td>
+    <td><strong>{pos}</strong></td>
+    <td>{AK}</td>
+    <td><a href="{url}main/artiest.php?artiest={artiest_id}">{artiest}</a></td>
+    <td><a href="{url}main/album.php?album={album_id}">{album}</a></td>
+    <td>{jaar}</td>
+  </tr>
+<!-- END BLOCK : canon.row -->
+</table>

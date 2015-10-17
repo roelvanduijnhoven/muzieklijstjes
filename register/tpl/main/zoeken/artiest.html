@@ -1,0 +1,35 @@
+<strong>Zoeken op artiest </strong><br>
+<br>
+<table width="700"  border="0">
+  <tr>
+    <td colspan="5"><strong>Resultaten</strong>:  er zijn {i_artiest} artiesten gevonden<strong> <br>
+      <br>   
+      </strong>
+    </td>
+  </tr>
+  <tr>
+    <td width="30">Nr</td>
+    <td width="420">Artiest <a href="{url}main/zoeken/artiest.php?artiest={vArtiest}&order=artiest">^</a></td>
+    <td width="60">Albums <a href="{url}main/zoeken/artiest.php?artiest={vArtiest}&order=albums">^</a></td>
+    <td width="75">Recensies <a href="{url}main/zoeken/artiest.php?artiest={vArtiest}&order=recensies">^</a></td>
+    <td width="100">Vermeldingen <a href="{url}main/zoeken/artiest.php?artiest={vArtiest}&order=lijsten">^</a></td>
+  </tr>
+  <tr>
+    <td colspan="5"><hr color=blue></td>
+  </tr>
+<!-- START BLOCK : artiest.row -->  
+  <tr>
+    <td>{nr}</td>
+    <td><a href="{url}main/artiest.php?artiest={artiest_id}">{artiest}</a></td>
+    <td><div align="center">{albums}</div></td>
+    <td><div align="center">{recensies}</div></td>
+    <td><div align="center">{lijsten}</div></td>
+  </tr>
+<!-- END BLOCK : artiest.row -->
+<!-- START BLOCK : artiest.norow -->  
+  <tr>
+	<td colspan="5">Er konden geen artiesten gevonden worden</td>
+  </tr>
+<!-- END BLOCK : artiest.norow -->    
+    
+</table>

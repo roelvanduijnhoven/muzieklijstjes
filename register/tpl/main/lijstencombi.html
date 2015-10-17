@@ -1,0 +1,61 @@
+<!-- START BLOCK : l.select -->
+<form name="lijstencombi" id = "lijstencombi" method="post" style="display:inline;">
+	<table width="700" border="0">
+	  <tr>
+		<td colspan="7"><strong>Alle muzieklijsten <br>
+		  <br>
+		</strong></td>
+	  </tr>
+	  <tr>
+		<td width="30"><input type="checkbox" id="checkallnone" name="checkallnone" value="checkbox" onClick="checkUncheck(document.lijstencombi.lijsten, this)"></td>
+		<td width="85">Bron <a href="?sort=bron">^</a> </td>
+		<td width="50">Jaar <a href="?sort=jaar">^</a> </td>
+		<td width="200">Muzieklijstjes <a href="?sort=omschrijving">^ </a></td>
+		<td width="55">Canon <a href="?sort=canon">^</a> </td>
+		<td width="44">Type <a href="?sort=type">^</a> </td>
+	    <td width="55">Soort <a href="?sort=soort">^</a> </td>
+	  </tr>
+	  <tr>
+		<td colspan="7"><hr color=blue></td>
+	  </tr>
+<!-- START BLOCK : l.select.row -->
+	  <tr>
+		<td><input type="checkbox" id = "lijsten" name="lijsten[{nr}]" value="{lijst_id}"></td>
+		<td><acronym title="{bron}">{aBron}</acronym></td>
+		<td>{jaar}</td>
+		<td><a title="{fulllijst}" href="{url}main/lijst.php?lijst={lijst_id}">{lijst}</a></td>
+		<td><div align="center">{canon}</div></td>
+		<td><div align="center">{typelijst}</div></td>
+	    <td>{soort}</td>
+	  </tr>
+<!-- END BLOCK : l.select.row -->
+	</table>
+<br>
+<input type="submit" name="Submit" value="Genereer">
+</form>
+<!-- END BLOCK : l.select -->
+<!-- START BLOCK : l.lijst -->
+<table width="700" border="0">
+  <tr>
+  	<td width="30">Nr</td>
+    <td width="30">Pos</td>
+    <td width="30">Ak <a href="{url}main/canon.php">^</a></td>
+    <td width="260">Artiest <a href="?order=artiest">^</a></td>
+    <td width="300">Titel <a href="?order=titel">^</a></td>
+    <td width="50">Jaar <a href="?order=jaar">^</a></td>
+  </tr>
+  <tr>
+    <td height="21" colspan="6"><hr color=blue></td>
+  </tr>
+<!-- START BLOCK : l.lijst.row -->
+  <tr>
+    <td>{nr}</td>
+    <td><strong>{pos}</strong></td>
+    <td>{AK}</td>
+    <td><a href="{url}main/artiest.php?artiest={artiest_id}">{artiest}</a></td>
+    <td><a href="{url}main/album.php?album={album_id}">{album}</a></td>
+    <td>{jaar}</td>
+  </tr>
+<!-- END BLOCK : l.lijst.row -->
+</table>
+<!-- END BLOCK : l.lijst -->

@@ -1,0 +1,39 @@
+<table width="700" border="0">
+  <tr>
+    <td width="40%">Lijst</td>
+    <td><a href="{url}main/lijst.php?lijst={bLijst_id}">{lijst}</a></td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>Album</td>
+    <td><a href="{url}main/album.php?album={album_id}">{album}</a></td>
+  </tr>
+  <tr>
+    <td>Artiest</td>
+    <td><a href="{url}main/artiest.php?artiest={artiest_id}">{artiest}</a></td>
+  </tr>
+</table>
+<br>
+<br>
+<strong>Deze plaat werd genoemd door: </strong><br>
+<br>
+<table width="700" border="0">
+  <tr>
+    <td width="30">Nr</td>
+    <td width="40">Pos <a href="{url}main/genoemddoor.php?lijst={lijst_id}&order=pos">^</a></td>
+    <td width="630">Recensent <a href="{url}main/genoemddoor.php?lijst={lijst_id}&order=recensent">^</a></td>
+  </tr>
+  <tr>
+    <td colspan="3"><hr color=blue></td>
+  </tr>
+<!-- START BLOCK : genoemddoor.row -->  
+  <tr>
+    <td>{nr}</td>
+    <td><strong>{pos}</strong></td>
+    <td><a href="{url}main/recensent.php?recensent={recensent_id}">{recensent}</a></td>
+  </tr>
+<!-- END BLOCK : genoemddoor.row -->    
+</table>

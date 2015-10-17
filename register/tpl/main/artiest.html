@@ -1,0 +1,43 @@
+<strong>{artiest}</strong>
+<br>
+<br>
+<table width="100%"  border="0">
+  <tr>
+    <td width="30%">All Music</td>
+    <td><a target="blank" href="http://www.allmusic.com/cg/amg.dll?p=amg&sql=1:{allMusicArtiest}">link</a></td>
+  </tr>
+</table>
+<br>
+<br>
+<table width="700"  border="0">
+  <tr>
+    <td colspan="5"><p><strong>Gevonden Albums<br>
+      <br>
+    </strong></p>
+    </td>
+  </tr>
+  <tr>
+    <td width="30">Nr</td>
+    <td width="420">Album <a href="{url}main/artiest.php?artiest={id}&order=album">^</a></td>
+    <td width="50">Jaar <a href="{url}main/artiest.php?artiest={id}&order=jaar">^</a></td>
+    <td width="100">Recensies <a href="{url}main/artiest.php?artiest={id}&order=recensies">^</a></td>
+    <td width="100">Vermeldingen <a href="{url}main/artiest.php?artiest={id}&order=lijsten">^</a></td>
+  </tr>
+  <tr>
+    <td colspan="5"><hr color=blue></td>
+  </tr>
+<!-- START BLOCK : artiest.row -->  
+  <tr>
+    <td>{nr}</td>
+    <td><a href="{url}main/album.php?album={album_id}">{album}</a></td>
+    <td>{jaar}</td>
+    <td><div align="center">{recensies}</div></td>
+    <td><div align="center">{lijsten}</div></td>
+  </tr>
+<!-- END BLOCK : artiest.row -->
+<!-- START BLOCK : artiest.norow -->  
+  <tr>
+    <td colspan="5">&nbsp;</td>
+  </tr>
+<!-- END BLOCK : artiest.norow -->    
+</table>
