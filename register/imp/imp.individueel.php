@@ -3,7 +3,7 @@
 	set_time_limit ( 0 );
 	ini_set('memory_limit', '400M');
 
-	$file = "individueel.txt";
+	$file = "lijstenI.csv";
 
 	# MySql
 	include "db.php";
@@ -83,7 +83,7 @@
 
 	# Laad bestand in
 	$input = join ( "", file ( $file  ) );
-	$individueel = explode ( "\r\n", $input );
+	$individueel = explode ( PHP_EOL, $input );
 
 
 	$i = 1;
