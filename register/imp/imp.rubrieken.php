@@ -24,10 +24,10 @@
 	# Controleer alles, en voer gegevens in
 	foreach ( $rubrieken as $data )
 	{
+		$data = explode ( "\t", $data );
 		if (!$data[0]) {
 			continue;
 		}
-		$data = explode ( "\t", $data );
 
 		$index = strtolower($data[2]);
 

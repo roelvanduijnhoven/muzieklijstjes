@@ -217,6 +217,23 @@ CREATE TABLE IF NOT EXISTS `soort` (
 
 -- --------------------------------------------------------
 
+INSERT INTO `soort` (`soort_id`, `soort`) VALUES
+(1, 'Algemeen'),
+(2, 'Blues'),
+(3, 'C&W'),
+(4, 'Dance'),
+(5, 'Folk'),
+(6, 'Funk'),
+(7, 'Heavy'),
+(8, 'Hiphop'),
+(9, 'Jazz'),
+(10, 'Punk'),
+(11, 'Reggae'),
+(12, 'Soul'),
+(13, 'Soundtrack'),
+(14, 'Underground'),
+(15, 'World');
+
 --
 -- Table structure for table `tijdschrift`
 --

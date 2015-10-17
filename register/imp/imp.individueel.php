@@ -93,6 +93,9 @@
 		$i++;
 
 		$data = explode ( "\t", $data );
+		if (!$data[0]) {
+			continue;
+		}
 
 		$aRecensent = addslashes ( $data[0] );
 		$lijst = addslashes ( $data[1] );

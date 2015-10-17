@@ -99,6 +99,9 @@
 	foreach ( $recensies as $data )
 	{
 		$data = explode ( "\t", $data );
+		if (!$data[0]) {
+			continue;
+		}
 
 
 		## Quickref
