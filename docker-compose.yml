@@ -1,0 +1,31 @@
+web:
+  build: .
+  volumes:
+   - .:/code
+  links:
+   - mysql
+nginx:
+  image: nginx
+  links:
+   - web
+  volumes:
+   - .:/code
+   - docker/nginx.conf:/etc/nginx/conf.d/default.conf
+  ports:
+   - "80:80"
+mysql:
+  command: mysqld --user=root --verbose
+  image: mysql:5.5
+  volumes:
+    - .mysql/dev:/var/lib/mysql
+  environment:
+    MYSQL_DATABASE: dev
+    MYSQL_USER: user
+    MYSQL_PASSWORD: password
+    MYSQL_ALLOW_EMPTY_PASSWORD: yes
+phpmyadmin:
+  image: corbinu/docker-phpmyadmin
+  links:
+    - mysql
+  ports:
+   - "443:80"
