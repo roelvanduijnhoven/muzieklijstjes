@@ -1,8 +1,7 @@
 <?
-	include "class.mysql.php";
-	
-	$sql = new mysql;
+include "class.mysql.php";
 
-	$sql->connect ( "localhost", "root", "" ); // localhost is hoogstwaarschijnlijk al goed
-	$sql->select_db ( "register" );					// deze is hoogstwaarschijnlijk 'register'
-?>
+$sql = new mysql;
+
+$sql->connect ( "mysql", "user", "password" ); // localhost is hoogstwaarschijnlijk al goed
+$sql->select_db ( "dev" );					// deze is hoogstwaarschijnlijk 'register'

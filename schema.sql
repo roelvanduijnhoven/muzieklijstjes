@@ -20,6 +20,19 @@ SET time_zone = "+00:00";
 -- Database: `dev`
 --
 
+SET FOREIGN_KEY_CHECKS = 0;
+  SET GROUP_CONCAT_MAX_LEN=32768;
+  SET @tables = NULL;
+  SELECT GROUP_CONCAT(table_name) INTO @tables
+    FROM information_schema.tables
+    WHERE table_schema = (SELECT DATABASE());
+  SELECT IFNULL(@tables,'dummy') INTO @tables;
+  SET @tables = CONCAT('DROP TABLE IF EXISTS ', @tables);
+  PREPARE stmt FROM @tables;
+  EXECUTE stmt;
+  DEALLOCATE PREPARE stmt;
+  SET FOREIGN_KEY_CHECKS = 1;
+
 -- --------------------------------------------------------
 
 --
@@ -229,7 +242,8 @@ INSERT INTO `tijdschrift` (`id`, `tijdschrift`, `waardering`) VALUES
 (8, 'A2', 0),
 (12, '1001 Songs', 0),
 (9, 'Muziekweb (CDR)', 3),
-(10, 'Revolver''s Lust for life', 5);
+(10, "Revolver's Lust for life", 5),
+(11, 'Muziekweb CDR', 0);
 
 --
 -- Indexes for dumped tables
