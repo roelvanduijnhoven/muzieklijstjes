@@ -1,12 +1,12 @@
 <?
-	$file = "lijstenB.txt";
+	$file = "lijstenB.csv";
 
 	# MySql
 	include "db.php";
 
 	# Laad bestand in
 	$input = join ( "", file ( $file  ) );
-	$lijsten = explode ( "\r\n", $input );
+	$lijsten = explode ( PHP_EOL, $input );
 
 	# Laad alle soorten in
 	$arrSoort = array ( );
