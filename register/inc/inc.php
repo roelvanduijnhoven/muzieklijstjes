@@ -2,8 +2,7 @@
 
 	header('Content-Type: text/html; charset=utf-8'); 
 
-//	$rel = "http://www.muzieklijstjes.nl/register/";
-	$rel = "http://localhost/register/";
+	$rel = "http://www.muzieklijstjes.dev/register/";
 	$abs = $_SERVER['DOCUMENT_ROOT'] . "/register/";
 	
 	
