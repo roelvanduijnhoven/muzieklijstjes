@@ -2,6 +2,7 @@ web:
   build: .
   volumes:
    - .:/code
+   - docker/php.ini:/usr/local/etc/php/conf.d/default.ini
   links:
    - mysql
 nginx:
