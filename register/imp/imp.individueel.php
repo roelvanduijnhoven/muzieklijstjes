@@ -50,7 +50,7 @@
 
 
 	## Haal alle lijsten beschrijvingen op
-	$qLijst = "SELECT id, lijst, individueel FROM lijstenb";
+	$qLijst = "SELECT id, lijst, individueel FROM lijstenB";
 	$rLijst = $sql->query ( $qLijst );
 
 	$lijstArr = array ( );
@@ -151,7 +151,7 @@
 
 		if ( $lijst_id > 0 && $recensent_id > 0 && $artiest_id > 0 && $album_id > 0 && $lijstMatch_id > 0 )
 		{
-			if ( $sql->query ( "INSERT INTO `lijsteni` ( `lijsten_id` , `recensent_id` , `pos` ) VALUES ( " . $lijstMatch_id . ", " . $recensent_id . ", " . $pos . " )" ) )
+			if ( $sql->query ( "INSERT INTO `lijstenI` ( `lijsten_id` , `recensent_id` , `pos` ) VALUES ( " . $lijstMatch_id . ", " . $recensent_id . ", " . $pos . " )" ) )
 				$succes++;
 
 			$UPDATE_titel[ $album_id . "_" . $lijst_id ]['punten'] += $lijstArr[ strtolower ( $lijst ) ]['individueel'] - $pos + 1;

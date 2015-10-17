@@ -129,10 +129,10 @@ CREATE TABLE IF NOT EXISTS `lijsten` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `lijstenb`
+-- Table structure for table `lijstenB`
 --
 
-CREATE TABLE IF NOT EXISTS `lijstenb` (
+CREATE TABLE IF NOT EXISTS `lijstenB` (
   `id` int(11) NOT NULL,
   `soort_id` int(11) NOT NULL DEFAULT '0',
   `lijst` varchar(5) NOT NULL DEFAULT '',
@@ -149,10 +149,10 @@ CREATE TABLE IF NOT EXISTS `lijstenb` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `lijsteni`
+-- Table structure for table `lijstenI`
 --
 
-CREATE TABLE IF NOT EXISTS `lijsteni` (
+CREATE TABLE IF NOT EXISTS `lijstenI` (
   `lijsten_id` int(11) NOT NULL DEFAULT '0',
   `recensent_id` int(11) NOT NULL DEFAULT '0',
   `pos` int(11) NOT NULL DEFAULT '0'
@@ -314,16 +314,16 @@ ALTER TABLE `lijsten`
   ADD KEY `album_id` (`album_id`);
 
 --
--- Indexes for table `lijstenb`
+-- Indexes for table `lijstenB`
 --
-ALTER TABLE `lijstenb`
+ALTER TABLE `lijstenB`
   ADD PRIMARY KEY (`id`),
   ADD KEY `soort_id` (`soort_id`);
 
 --
--- Indexes for table `lijsteni`
+-- Indexes for table `lijstenI`
 --
-ALTER TABLE `lijsteni`
+ALTER TABLE `lijstenI`
   ADD KEY `lijsten_id` (`lijsten_id`),
   ADD KEY `recensent_id` (`recensent_id`);
 
@@ -391,9 +391,9 @@ ALTER TABLE `kenmerk`
 ALTER TABLE `lijsten`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 --
--- AUTO_INCREMENT for table `lijstenb`
+-- AUTO_INCREMENT for table `lijstenB`
 --
-ALTER TABLE `lijstenb`
+ALTER TABLE `lijstenB`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `recensent`

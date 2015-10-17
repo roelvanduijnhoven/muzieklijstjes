@@ -4,7 +4,7 @@
 	
 	if ( isset ( $_GET['lijst'] ) && is_numeric ( $_GET['lijst'] ) )
 	{
-		$qLijst = "SELECT id, lijst, omschrijving, bron, jaar, url, type FROM lijstenb WHERE id = " . $_GET['lijst'];
+		$qLijst = "SELECT id, lijst, omschrijving, bron, jaar, url, type FROM lijstenB WHERE id = " . $_GET['lijst'];
 		$rLijst = $sql->query ( $qLijst );
 		
 		if ( $sql->num_rows ( $rLijst ) > 0 )

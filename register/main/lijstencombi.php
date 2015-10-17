@@ -187,7 +187,7 @@
 			type,
 			canon
 		FROM
-			lijstenb
+			lijstenB
 		ORDER BY ";
 		
 		$order = array (

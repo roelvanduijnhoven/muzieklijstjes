@@ -44,7 +44,7 @@
 
 		if ( empty ( $individueel ) ) $individueel = 0;
 
-		if ( $sql->query ( "INSERT INTO `lijstenb` (`id`, `lijst`, `jaar`, `bron`, `omschrijving`, `url`, `type`, `canon`, `individueel`, `soort_id`) VALUES ('', '".$lijst."', '".$jaar."', '".$bron."', '".$omschrijving."', '".$url."', '".$type."', '" . $cannon . "', " . $individueel . ", " . $soort_id . ")" ) )
+		if ( $sql->query ( "INSERT INTO `lijstenB` (`id`, `lijst`, `jaar`, `bron`, `omschrijving`, `url`, `type`, `canon`, `individueel`, `soort_id`) VALUES ('', '".$lijst."', '".$jaar."', '".$bron."', '".$omschrijving."', '".$url."', '".$type."', '" . $cannon . "', " . $individueel . ", " . $soort_id . ")" ) )
 			$i++;
 	}
 

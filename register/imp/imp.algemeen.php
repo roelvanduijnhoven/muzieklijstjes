@@ -78,7 +78,7 @@
 
 
 	## Haal alle lijsten op
-	$qLijst = "SELECT id, individueel, lijst FROM lijstenb";
+	$qLijst = "SELECT id, individueel, lijst FROM lijstenB";
 	$rLijst = $sql->query ( $qLijst );
 
 	$lijstArr = array ( );

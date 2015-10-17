@@ -130,7 +130,7 @@
 				lb.canon as canon
 			FROM
 				lijsten as l
-				LEFT JOIN lijstenb as lb ON l.lijst_id = lb.id
+				LEFT JOIN lijstenB as lb ON l.lijst_id = lb.id
 			WHERE
 				l.album_id = '" . $_GET['album'] . "' ORDER BY ";
 				
