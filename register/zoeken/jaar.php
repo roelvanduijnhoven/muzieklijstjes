@@ -5,7 +5,7 @@
 	if ( is_numeric ( $_GET['jaar'] ) )
 	{
 		$tpl->assign ( array (
-			"jaar" => $_GET['jaar']
+			"x_jaar" => $_GET['jaar']
 		) );
 
 		## Basisquery
