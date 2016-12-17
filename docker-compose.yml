@@ -2,7 +2,7 @@ web:
   build: .
   volumes:
    - .:/code
-   - docker/php.ini:/usr/local/etc/php/conf.d/default.ini
+   - ./docker/php.ini:/usr/local/etc/php/conf.d/default.ini
   links:
    - mysql
 nginx:
@@ -11,19 +11,19 @@ nginx:
    - web
   volumes:
    - .:/code
-   - docker/nginx.conf:/etc/nginx/conf.d/default.conf
+   - ./docker/nginx.conf:/etc/nginx/conf.d/default.conf
   ports:
    - "80:80"
 mysql:
   command: mysqld --user=root --verbose
   image: mysql:5.5
   volumes:
-    - .mysql/dev:/var/lib/mysql
+    - ./.mysql/dev:/var/lib/mysql
   environment:
     MYSQL_DATABASE: dev
     MYSQL_USER: user
     MYSQL_PASSWORD: password
-    MYSQL_ALLOW_EMPTY_PASSWORD: yes
+    MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
 phpmyadmin:
   image: corbinu/docker-phpmyadmin
   links:
