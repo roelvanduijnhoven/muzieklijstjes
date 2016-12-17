@@ -1,5 +1,10 @@
 <!-- START BLOCK : zoek -->
-<strong>Zoek recensenten adh van kenmerken en genre's </strong><br>
+
+<h2>
+  Zoek recensenten
+  <small>adh van kenmerken en genre's</small>
+</h2>
+
 <br>
 <form name="zoekRecensent" method="get" action="" style="display:inline;">
 <table width="100%" border="0">
@@ -18,15 +23,15 @@
     <td>
 <!-- START BLOCK : zoek.row.kenmerk -->
 	<input name="kenmerk[{kenmerk_id}]" type="checkbox" id="kenmerk" value="true">{kenmerk}
-<!-- END BLOCK : zoek.row.kenmerk -->	
+<!-- END BLOCK : zoek.row.kenmerk -->
 	</td>
     <td>
 <!-- START BLOCK : zoek.row.genre -->
 	<input name="genre[{genre_id}]" type="checkbox" id="genre" value="true">{genre}
-<!-- END BLOCK : zoek.row.genre -->	
+<!-- END BLOCK : zoek.row.genre -->
 	</td>
   </tr>
-<!-- END BLOCK : zoek.row -->  
+<!-- END BLOCK : zoek.row -->
 </table>
 <br>
 <input type="submit" value=" Zoek &gt; ">
@@ -47,17 +52,17 @@
   <tr>
     <td colspan="2"><hr color=blue></td>
   </tr>
-<!-- START BLOCK : result.row -->  
+<!-- START BLOCK : result.row -->
   <tr>
     <td>{nr}</td>
     <td><a href="{url}recensent.php?recensent={id}">{recensent}</a></td>
   </tr>
 <!-- END BLOCK : result.row -->
-<!-- START BLOCK : result.norow -->  
+<!-- START BLOCK : result.norow -->
   <tr>
 	<td colspan="2">Er konden geen recensenten gevonden worden</td>
   </tr>
-<!-- END BLOCK : result.norow -->    
-    
+<!-- END BLOCK : result.norow -->
+
 </table>
 <!-- END BLOCK : result -->

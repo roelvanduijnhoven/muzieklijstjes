@@ -17,20 +17,16 @@
     padding-top: 60px;
   }
   .blog-header {
-    margin-bottom: 60px;
+    margin-bottom: 30px;
   }
   </style>
-    <script language="text/javascript">
-
-	function checkUncheck ( field, controlField )
-	{
-
-		var status = controlField.checked
-		for ( i = 0; i < field.length; i++ )
-			field[i].checked = status;
-
-	}
-
+  <script>
+  	function checkUncheck ( field, controlField )
+  	{
+  		var status = controlField.checked
+  		for ( i = 0; i < field.length; i++ )
+  			field[i].checked = status;
+  	}
 	</script>
 </head>
 <body>
@@ -170,8 +166,8 @@
       <hr />
     <p style="text-align: center">
         <a href="http://www.muzieklijstjes.nl" target="_blank">Muzieklijstjes.nl</a>
-      - <a href="{url}index.php" target="main">Toelichting</a>
-      - <a href="{url}update.php" target="main">Updates</a>
+      - <a href="{url}index.php">Toelichting</a>
+      - <a href="{url}update.php">Updates</a>
       - <img src="{url}img/email.jpg">
     </p>
   </footer>

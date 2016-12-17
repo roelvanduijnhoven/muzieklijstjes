@@ -20,7 +20,8 @@
 			$tpl->newblock ( "individueel" );
 			$tpl->assign ( array (
 				"lijst_id" => $_GET['lijst'],
-				"recensent_id" => $_GET['recensent']
+				"recensent_id" => $_GET['recensent'],
+        'recensent' => $recensent['recensent'],
 			) );
 
 
@@ -61,6 +62,7 @@
 				l.lijst_id = lb.id AND
 
 				li.recensent_id = " . $_GET['recensent'] . "
+        AND l.lijst_id = " . $_GET['lijst'] . "
 			ORDER BY lb.id, ";
 
 			# Order
