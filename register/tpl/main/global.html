@@ -34,7 +34,7 @@
   <div class="container">
 
     <div class="blog-header">
-      <h1 class="blog-title">Register op Muzieklijstjes</h1>
+      <h1 class="blog-title"><a href="{url}">Register op Muzieklijstjes</a></h1>
       <p class="lead blog-description">Alle jaarlijstjes die er toe doen, in één register</p>
     </div>
 
@@ -43,6 +43,7 @@
         <!-- INCLUDE BLOCK : include -->
       </div>
       <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
+
         <form action="{url}zoeken/artiest.php" method="post" name="">
           <table width="100%"  border="0">
             <tr>
@@ -66,6 +67,18 @@
             </tr>
           </table>
         </form>
+
+
+        <table width="100%"  border="0">
+          <tr>
+            <td><strong> Muziekcanon </strong></td>
+          </tr>
+          <tr>
+            <td>
+            <a href="{url}canon.php">Bekijk de canon</a>
+            </td></tr>
+        </table>
+        <br />
 
         <form action="{url}zoeken/recensent.php" method="get" name="">
           <table width="100%"  border="0">
@@ -153,9 +166,26 @@
           </table>
         </form>
 
-        &gt; <a href="{url}canon.php">Muziekcanon</a> <br>
-        &gt; <a href="{url}lijstencombi.php">Combineer lijsten tot nieuwe lijst </a><br>
-        &gt; <a href="{url}zoeken/recensentGenreKenmerk.php"">Zoek recensent ahv genre/kenmerk</a><br>
+        <table width="100%"  border="0">
+          <tr>
+            <td><strong> Combineer lijsten </strong></td>
+          </tr>
+          <tr>
+            <td>
+            <a href="{url}lijstencombi.php">Combineer lijsten tot eigen canon</a>
+            </td></tr>
+        </table>
+          <br />
+
+        <table width="100%"  border="0">
+          <tr>
+            <td><strong> Bekijk recensenten</strong></td>
+          </tr>
+          <tr>
+            <td>
+            <a href="{url}canon.php">Zoek ahv genre of kenmerk</a>
+            </td></tr>
+        </table>
       </div>
     </div>
 
