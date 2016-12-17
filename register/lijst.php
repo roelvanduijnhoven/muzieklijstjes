@@ -1,6 +1,6 @@
 <?
 	$template = "main/lijst";
-	include "../inc/inc.php";
+	include "inc/inc.php";
 
 	if ( isset ( $_GET['lijst'] ) && is_numeric ( $_GET['lijst'] ) )
 	{

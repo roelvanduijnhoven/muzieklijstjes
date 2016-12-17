@@ -1,4 +1,4 @@
 <?
 	$template = "main/update";
-	include "../inc/inc.php";
+	include "inc/inc.php";
 ?>

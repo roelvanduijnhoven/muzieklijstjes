@@ -7,7 +7,7 @@
         font-family: verdana;
         font-size: 11px;
         color: black;
-    }	
+    }
     body {
         background-color: white;
     }
@@ -16,21 +16,159 @@
         border: 1px solid #999999;
     }
     </style>
-    
+
     <script language="text/javascript">
-	
+
 	function checkUncheck ( field, controlField )
 	{
-	
+
 		var status = controlField.checked
 		for ( i = 0; i < field.length; i++ )
 			field[i].checked = status;
-			
+
 	}
 
 	</script>
 </head>
 <body>
-<!-- INCLUDE BLOCK : include -->
+
+  <div>
+    <h1>Register op muzieklijstjes</h1>
+  </div>
+
+  <div>
+    <form action="{url}zoeken/artiest.php" method="post" name="">
+      <table width="100%"  border="0">
+        <tr>
+          <td><strong>Artiest</strong></td>
+        </tr>
+        <tr>
+          <td><input name="artiest" type="text" id="artiest">
+            <input type="submit" value="&gt;&gt;"></td>
+        </tr>
+      </table>
+    </form>
+
+    <form action="{url}zoeken/album.php" method="get" name="">
+      <table width="100%"  border="0">
+        <tr>
+          <td><strong>Album</strong></td>
+        </tr>
+        <tr>
+          <td><input name="album" type="text" id="album">
+            <input type="submit" value="&gt;&gt;"></td>
+        </tr>
+      </table>
+    </form>
+
+    <form action="{url}zoeken/recensent.php" method="get" name="">
+      <table width="100%"  border="0">
+        <tr>
+          <td><strong>Recensent</strong></td>
+        </tr>
+        <tr>
+          <td><input name="recensent" type="text" id="album">
+            <input type="submit" value="&gt;&gt;"></td>
+        </tr>
+      </table>
+    </form>
+
+    <form action="{url}zoeken/waardering.php" method="get" name="">
+      <table width="100%"  border="0">
+        <tr>
+          <td><strong>Album met sterren</strong></td>
+        </tr>
+        <tr>
+          <td>
+    	  <select name="tijdschrift" id="tijdschrift">
+    <!-- START BLOCK : w.tijdschrift -->
+    	    <option value="{id}">{tijdschrift}</option>
+    <!-- END BLOCK : w.tijdschrift -->
+          </select> <select name="waardering" id="waardering">
+            <option>0.5</option>
+            <option>1</option>
+            <option>1.5</option>
+            <option>2</option>
+            <option>2.5</option>
+            <option>3</option>
+            <option>3.5</option>
+            <option>4</option>
+            <option>4.5</option>
+            <option>5</option>
+          </select> <input type="submit" value="&gt;&gt;">
+    	  </td>
+        </tr>
+      </table>
+    </form>
+
+    <form action="{url}zoeken/vermelding.php" method="get" name="">
+      <table width="100%"  border="0">
+        <tr>
+          <td><strong>Album x keer genoemd </strong></td>
+        </tr>
+        <tr>
+          <td><input name="vermelding" type="text" id="vermelding" size="2">
+          <input type="submit" value="&gt;&gt;">
+          </td>
+        </tr>
+      </table>
+    </form>
+
+    <form action="{url}zoeken/jaar.php" method="get" name="">
+      <table width="100%"  border="0">
+        <tr>
+          <td><strong>Album op jaar </strong></td>
+        </tr>
+        <tr>
+          <td><input name="jaar" type="text" id="jaar" size="4" value="19">
+          <input type="submit" value="&gt;&gt;">
+          </td>
+        </tr>
+      </table>
+    </form>
+
+    <form action="{url}nummer.php" method="get" name="">
+    <table width="100%"  border="0">
+        <tr>
+          <td><strong> Tijdschrift opvragen </strong></td>
+        </tr>
+        <tr>
+          <td>
+    	    <select name="tijdschrift" id="tijdschrift">
+            <!-- START BLOCK : tijdschrift -->
+            <option value="{id}">{tijdschrift}</option>
+            <!-- END BLOCK : tijdschrift -->
+            </select>
+    	    <input name="jaar" type="text" id="jaar" value="19" size="4">
+    	    <input name="nummer" type="text" id="nummer" size="2">
+
+            <input type="submit" value="&gt;&gt;">
+          </td></tr>
+      </table>
+    </form>
+
+    &gt; <a href="{url}canon.php">Muziekcanon</a> <br>
+    &gt; <a href="{url}lijstencombi.php">Combineer lijsten tot nieuwe lijst </a><br>
+    &gt; <a href="{url}zoeken/recensentGenreKenmerk.php"">Zoek recensent ahv genre/kenmerk</a><br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <hr color="darkblue">
+    <font style="font-size:12px;">
+    <br>
+    &gt; <a href="http://www.muzieklijstjes.nl" target="_blank">Muzieklijstjes.nl</a><br>
+    <br>
+    <strong>Binnen deze site</strong><br>
+    - <a href="{url}index.php" target="main">Toelichting</a><br>
+    - <a href="{url}update.php" target="main">Updates</a><br>
+    - <img src="{url}img/email.jpg"></font>
+  </div>
+
+  <div>
+    <!-- INCLUDE BLOCK : include -->
+  </div>
+
 </body>
 </html>

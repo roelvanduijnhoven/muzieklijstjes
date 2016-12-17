@@ -1,2 +1,0 @@
-[15-Apr-2009 03:00:03] PHP Warning:  mysql_connect() [<a href='function.mysql-connect'>function.mysql-connect</a>]: Can't connect to MySQL server on 'localhost' (10061) in D:\Sites\Muzieklijstjes\register\inc\class.mysql.php on line 13
-[15-Apr-2009 03:00:03] PHP Warning:  mysql_error(): supplied argument is not a valid MySQL-Link resource in D:\Sites\Muzieklijstjes\register\inc\class.mysql.php on line 13

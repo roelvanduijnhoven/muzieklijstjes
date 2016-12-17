@@ -1,6 +1,6 @@
 <table width="700" border="0">
   <tr>
-    <td colspan="2"><strong><a href="{url}main/artiest.php?artiest={artiest_id}">{artiest}</a> - {album}<br>
+    <td colspan="2"><strong><a href="{url}artiest.php?artiest={artiest_id}">{artiest}</a> - {album}<br>
       <br>
     </strong></td>
   </tr>
@@ -28,11 +28,11 @@
   </tr>
   <tr>
     <td width="30">Nr</td>
-    <td width="30">Ts <a href="{url}main/album.php?album={album_id}&rOrder=tijdschrift">^</a></td>
-    <td width="100">Jaar/Nr <a href="{url}main/album.php?album={album_id}&rOrder=jaargave">^</a></td>
-    <td width="150">Rubriek <a href="{url}main/album.php?album={album_id}&rOrder=rubriek">^</a></td>
-    <td width="290">Recensent <a href="{url}main/album.php?album={album_id}&rOrder=recensent">^</a></td>
-    <td width="80">Waardering <a href="{url}main/album.php?album={album_id}&rOrder=waardering">^</a></td>
+    <td width="30">Ts <a href="{url}album.php?album={album_id}&rOrder=tijdschrift">^</a></td>
+    <td width="100">Jaar/Nr <a href="{url}album.php?album={album_id}&rOrder=jaargave">^</a></td>
+    <td width="150">Rubriek <a href="{url}album.php?album={album_id}&rOrder=rubriek">^</a></td>
+    <td width="290">Recensent <a href="{url}album.php?album={album_id}&rOrder=recensent">^</a></td>
+    <td width="80">Waardering <a href="{url}album.php?album={album_id}&rOrder=waardering">^</a></td>
   </tr>
   <tr>
     <td colspan="6"><hr color=blue></td>
@@ -41,9 +41,9 @@
   <tr>
     <td>{nr}</td>
     <td><acronym title="{tijdschrift}">{aTijdschrift}</acronym></td>
-    <td><a href="{url}main/nummer.php?nummer={nummer}&jaar={jaar}&tijdschrift={tijdschrift_id}">{jaar} / {nummer}</a></td>
+    <td><a href="{url}nummer.php?nummer={nummer}&jaar={jaar}&tijdschrift={tijdschrift_id}">{jaar} / {nummer}</a></td>
     <td>{rubriek}</td>
-    <td><a href="{url}main/recensent.php?recensent={recensent_id}" title="{recensent}">{recensent}</a></td>
+    <td><a href="{url}recensent.php?recensent={recensent_id}" title="{recensent}">{recensent}</a></td>
     <td>{waardering}</td>
   </tr>
 <!-- END BLOCK : album_recensie.row -->
@@ -61,10 +61,10 @@
   </tr>
   <tr>
     <td width="30">Nr</td>
-    <td width="85">Bron <a href="{url}main/album.php?album={album_id}&order=bron">^</a></td>
-    <td width="50">Jaar <a href="{url}main/album.php?album={album_id}&order=jaar">^</a></td>
-    <td width="380">Muzieklijstjes <a href="{url}main/album.php?album={album_id}&order=lijst">^</a></td>
-    <td width="65">Canon <a href="{url}main/album.php?album={album_id}&order=canon">^</a></td>
+    <td width="85">Bron <a href="{url}album.php?album={album_id}&order=bron">^</a></td>
+    <td width="50">Jaar <a href="{url}album.php?album={album_id}&order=jaar">^</a></td>
+    <td width="380">Muzieklijstjes <a href="{url}album.php?album={album_id}&order=lijst">^</a></td>
+    <td width="65">Canon <a href="{url}album.php?album={album_id}&order=canon">^</a></td>
     <td width="30">AK</td>
     <td width="30">Pos</td>
     <td width="30">gPos</td>
@@ -77,7 +77,7 @@
     <td>{nr}</td>
     <td><acronym title="{bron}">{aBron}</acronym></td>
     <td>{jaar}</td>
-    <td><a href="{url}main/lijst.php?lijst={lijst_id}">{lijst}</a></td>
+    <td><a href="{url}lijst.php?lijst={lijst_id}">{lijst}</a></td>
     <td><div align="center">{canon}</div></td>
     <td>{ak}</td>
     <td>{pos}</td>

@@ -23,7 +23,7 @@
 		<td><input type="checkbox" id = "lijsten" name="lijsten[{nr}]" value="{lijst_id}"></td>
 		<td><acronym title="{bron}">{aBron}</acronym></td>
 		<td>{jaar}</td>
-		<td><a title="{fulllijst}" href="{url}main/lijst.php?lijst={lijst_id}">{lijst}</a></td>
+		<td><a title="{fulllijst}" href="{url}lijst.php?lijst={lijst_id}">{lijst}</a></td>
 		<td><div align="center">{canon}</div></td>
 		<td><div align="center">{typelijst}</div></td>
 	    <td>{soort}</td>
@@ -39,7 +39,7 @@
   <tr>
   	<td width="30">Nr</td>
     <td width="30">Pos</td>
-    <td width="30">Ak <a href="{url}main/canon.php">^</a></td>
+    <td width="30">Ak <a href="{url}canon.php">^</a></td>
     <td width="260">Artiest <a href="?order=artiest">^</a></td>
     <td width="300">Titel <a href="?order=titel">^</a></td>
     <td width="50">Jaar <a href="?order=jaar">^</a></td>
@@ -52,8 +52,8 @@
     <td>{nr}</td>
     <td><strong>{pos}</strong></td>
     <td>{AK}</td>
-    <td><a href="{url}main/artiest.php?artiest={artiest_id}">{artiest}</a></td>
-    <td><a href="{url}main/album.php?album={album_id}">{album}</a></td>
+    <td><a href="{url}artiest.php?artiest={artiest_id}">{artiest}</a></td>
+    <td><a href="{url}album.php?album={album_id}">{album}</a></td>
     <td>{jaar}</td>
   </tr>
 <!-- END BLOCK : l.lijst.row -->
