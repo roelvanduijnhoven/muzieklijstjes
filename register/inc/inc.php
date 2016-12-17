@@ -76,11 +76,15 @@
 	else
 	{
 		$tpl = new TemplatePower ( $abs . "tpl/" . $globalTemplate . "global.html" );
+
+
 		$tpl->assigninclude ( "include", $abs . "tpl/" . $globalTemplate . $template . ".html" );
 	}
 
 	$tpl->prepare ( );
+
 	$tpl->assignglobal ( "url", $rel );
+
 
   // Required for all pages
 
@@ -101,3 +105,5 @@
 			$tpl->assign ( $tijdschrift );
 		}
 	}
+
+$tpl->gotoBlock('_ROOT');
