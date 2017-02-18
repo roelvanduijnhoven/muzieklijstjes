@@ -128,7 +128,7 @@
 
 				$qDeelnemer = "
 				SELECT
-					DISTINCT(r.id) as id,
+					r.id as id,
 					recensent,
 					nRecensie
 				FROM
@@ -139,6 +139,7 @@
 					li.lijsten_id = l.id AND
 					li.recensent_id = r.id AND
 					l.lijst_id = " . $_GET['lijst'] . "
+				GROUP BY r.id
 				ORDER BY sRecensent ASC";
 				$rDeelnemer = $sql->query ( $qDeelnemer );
 				$nDeelnemer = $sql->num_rows ( $rDeelnemer );
