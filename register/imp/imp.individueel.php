@@ -3,7 +3,7 @@
 	set_time_limit ( 0 );
 	ini_set('memory_limit', '400M');
 
-	$file = "lijstenI.csv";
+	$file = __DIR__ . "/lijstenI.csv";
 
 	# MySql
 	include "db.php";
@@ -99,9 +99,9 @@
 
 		$aRecensent = addslashes ( $data[0] );
 		$lijst = addslashes ( $data[1] );
-		$pos = addslashes ( $data[2] );
-		$artiest = addslashes ( $data[3] );
-		$album = addslashes ( $data[4] );
+		$pos = addslashes ( $data[4] );
+		$artiest = addslashes ( $data[5] );
+		$album = addslashes ( $data[6] );
 
 		if (!$pos) {
 			$pos = 1;

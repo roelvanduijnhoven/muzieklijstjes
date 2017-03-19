@@ -1,7 +1,7 @@
 <?
-	$recensentenFile = "recensenten.csv";
-	$genresFile = "genres.csv";
-	$kenmerkenFile = "kenmerken.csv";
+	$recensentenFile = __DIR__ . "/recensenten.csv";
+	$genresFile = __DIR__ . "/genres.csv";
+	$kenmerkenFile = __DIR__ . "/kenmerken.csv";
 
 	# MySql
 	include "db.php";
@@ -67,17 +67,13 @@
 	foreach ( $recensenten as $data )
 	{
 		$data = explode ( "\t", $data );
-		if (!$data[0]) {
-			continue;
-		}
 
-		$recensent = addslashes ( $data[1] );
-		$sRecensent = addslashes ( $data[2] );
-		$aRecensent = addslashes ( $data[0] );
-		$url = addslashes ( $data[3] );
-		$genres = addslashes ( $data[4] );
-		$kenmerken = addslashes ( $data[5] );
-
+		$recensent = addslashes ( $data[2] );
+		$sRecensent = addslashes ( $data[3] );
+		$aRecensent = addslashes ( $data[1] );
+		$url = addslashes ( $data[4] );
+		$genres = addslashes ( $data[5] );
+		$kenmerken = addslashes ( $data[6] );
 
 		if ( $sql->query ( " INSERT INTO `recensent` (`id`, `recensent`, `sRecensent`, `aRecensent`, `url`) VALUES ('', '" . $recensent . "', '" . $sRecensent . "', '". $aRecensent ."', '" . $url . "')" ) )
 			$i++;

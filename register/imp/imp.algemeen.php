@@ -4,7 +4,7 @@
 	ini_set('memory_limit', '800M');
 
 
-	$file = "algemeen.csv";
+	$file = __DIR__ . "/algemeen.csv";
 
 
 	# Tijdschriften

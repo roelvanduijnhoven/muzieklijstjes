@@ -1,5 +1,5 @@
 <?
-	$file = "lijstenB.csv";
+	$file = __DIR__ . "/lijstenB.csv";
 
 	# MySql
 	include "db.php";
