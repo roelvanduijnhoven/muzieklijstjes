@@ -29,13 +29,13 @@
 
 		$lijst = addslashes ( $data[0] );
 		$jaar = addslashes ( $data[1] );
-		$bron = addslashes ( $data[2] );
-		$omschrijving = addslashes ( $data[3] );
-		$url = addslashes ( $data[4] );
-		$type = addslashes ( $data[5] );
-		$cannon = addslashes ( $data[6] );
-		$individueel = addslashes ( $data[7] );
-		$soort = addslashes ( $data[8] );
+		$bron = addslashes ( $data[3] );
+		$omschrijving = addslashes ( $data[4] );
+		$url = addslashes ( $data[5] );
+		$type = addslashes ( $data[6] );
+		$cannon = addslashes ( $data[7] );
+		$individueel = addslashes ( $data[8] );
+		$soort = addslashes ( $data[9] );
 
 		if ( isset ( $arrSoort [ $soort ] ) )
 			$soort_id = $arrSoort[ $soort ];

@@ -1,3 +1,5 @@
+# Step 1: clear database and import `./scheme.sql`
+
 rm *.html -f
 docker-compose run web php register/imp/imp.lijsten.php > output-lijstenB.html
 docker-compose run web php register/imp/imp.recensent.php > output-recensenten.html
