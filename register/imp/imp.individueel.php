@@ -103,8 +103,9 @@
 		$artiest = addslashes ( $data[5] );
 		$album = addslashes ( $data[6] );
 
-		if (!$pos) {
+		if (!$pos || !is_numeric($pos)) {
 			$pos = 1;
+			$log .= $i . ": Geen positie ingevuld voor recensent {$aRecensent} op {$lijst} met album {$album}<br>";
 		}
 
 		# Recensent_id
