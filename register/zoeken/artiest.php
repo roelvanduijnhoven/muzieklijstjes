@@ -23,8 +23,11 @@
 
 			$qArtiest .= substr ( $wArtiest, 0, -3 );
 		}
-		else//if ( strlen ( $_POST['artiest'] ) > 2 )
+		else if ( strlen ( $_POST['artiest'] ) > 2 )
 			$qArtiest .= " artiest LIKE '%" . $_POST['artiest'] . "%' ";
+                else {
+                        $qArtiest .= " FALSE ";
+                }
 
 		$qArtiest .= " ORDER BY ";
 

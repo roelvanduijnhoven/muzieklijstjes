@@ -28,8 +28,11 @@
 
 			$qAlbum .= substr ( $wAlbum, 0, -3 );
 		}
-		elseif ( strlen ( $_POST['album'] ) > 3 )
+		elseif ( strlen ( $_POST['album'] ) > 2 )
 			$qAlbum .= " album LIKE '%" . $_POST['album'] . "%' ";
+                else { 
+                        $qAlbum .= " FALSE ";
+                }
 
 		$qAlbum .= "ORDER BY ";
 

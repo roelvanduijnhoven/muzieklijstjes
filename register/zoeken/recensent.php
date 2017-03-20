@@ -25,6 +25,9 @@
 		}
 		elseif ( strlen ( $_POST['recensent'] ) > 2 )
 			$qRecensent .= " recensent LIKE '%" . $_POST['recensent'] . "%' ";
+                else {
+                        $qRecensent .= " FALSE ";
+                }
 
 		$qRecensent .= " ORDER BY sRecensent ASC";
 		$rRecensent = $sql->query ( $qRecensent );
