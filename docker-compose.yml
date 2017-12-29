@@ -15,7 +15,7 @@ nginx:
   ports:
    - "80:80"
 mysql:
-  image: mariadb:10.2
+  image: mariadb:5.5
   volumes:
     - database_volume:/var/lib/mysql
     - ./docker/mariadb.d:/etc/mysql/conf.d

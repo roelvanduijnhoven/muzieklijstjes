@@ -149,14 +149,14 @@
 				$artiest_id = $artiestArr[ strtolower ( $artiest ) ];
 			else
 			{
-				if ( $sql->query ( "INSERT INTO `artiest` (`id`, `artiest`, `sArtiest`) VALUES ('', \"". $artiest ."\", \"". $sArtiest ."\")" ) )
+				if ( $sql->query ( "INSERT INTO `artiest` (`artiest`, `sArtiest`) VALUES (\"". $artiest ."\", \"". $sArtiest ."\")" ) )
 					$stats['artiest']++;
 
 				$artiest_id = mysql_insert_id ( );
 				$artiestArr[ strtolower ( $artiest ) ] = $artiest_id;
 			}
 
-			if ( $sql->query ( "INSERT INTO `album` (`id`, `artiest_id`, `album`, `jaar` , `titelnummer`, `materiaal`) VALUES ('', '" . $artiest_id . "', \"" . $album . "\", '" . $albumjaar . "', '" . $titelnummer . "', '" . $materiaal . "' )" ) )
+			if ( $sql->query ( "INSERT INTO `album` (`artiest_id`, `album`, `jaar` , `titelnummer`, `materiaal`) VALUES ('" . $artiest_id . "', \"" . $album . "\", '" . $albumjaar . "', '" . $titelnummer . "', '" . $materiaal . "' )" ) )
 			{
 				$stats['album']++;
 
@@ -184,7 +184,7 @@
 
 
 			# Voer recensie in
-			if ( $sql->query ( "INSERT INTO `recensie` (`id`, `album_id`, `tijdschrift_id`, `recensent_id`, `jaar`, `maand`, `nummer`, `waardering`, `rubriek`) VALUES ('', '" . $album_id . "', '" . $tijdschrift_id . "', '" . $recensent_id . "', '" . $tijdschriftjaar . "', '" . $maand . "', '" . $nummer . "', '" . $waardering . "', '" . $rubriek_id . "')" ) )
+			if ( $sql->query ( "INSERT INTO `recensie` (`album_id`, `tijdschrift_id`, `recensent_id`, `jaar`, `maand`, `nummer`, `waardering`, `rubriek`) VALUES ('" . $album_id . "', '" . $tijdschrift_id . "', '" . $recensent_id . "', '" . $tijdschriftjaar . "', '" . $maand . "', '" . $nummer . "', '" . $waardering . "', '" . $rubriek_id . "')" ) )
 			{
 				$stats['recensie']++;
 
@@ -200,7 +200,7 @@
 		{
 			$lijst_id = $lijstArr [ $lijst ]['id'];
 
-			if ( $sql->query ( " INSERT INTO `lijsten` (`id`, `album_id`, `lijst_id`, `ak`, `pos`) VALUES ('', '".$album_id."', '".$lijst_id."', '".$ak."', '".$pos."')" ) )
+			if ( $sql->query ( " INSERT INTO `lijsten` (`album_id`, `lijst_id`, `ak`, `pos`) VALUES ('".$album_id."', '".$lijst_id."', '".$ak."', '".$pos."')" ) )
 			{
 				$stats['lijst']++;
 
