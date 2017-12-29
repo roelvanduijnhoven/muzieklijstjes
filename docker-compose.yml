@@ -15,15 +15,16 @@ nginx:
   ports:
    - "80:80"
 mysql:
-  command: mysqld --user=root --verbose
-  image: mysql:5.5
+  image: mariadb:10.2
   volumes:
-    - ./.mysql/dev:/var/lib/mysql
+    - database_volume:/var/lib/mysql
+    - ./docker/mariadb.d:/etc/mysql/conf.d
   environment:
+    MYSQL_ROOT_PASSWORD: password
     MYSQL_DATABASE: dev
     MYSQL_USER: user
     MYSQL_PASSWORD: password
-    MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
+    MYSQL_ALLOW_EMPTY_PASSWORD: 'yes'
 phpmyadmin:
   image: corbinu/docker-phpmyadmin
   links:
