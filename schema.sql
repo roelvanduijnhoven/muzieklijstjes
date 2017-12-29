@@ -135,7 +135,7 @@ CREATE TABLE IF NOT EXISTS `lijsten` (
 CREATE TABLE IF NOT EXISTS `lijstenB` (
   `id` int(11) NOT NULL,
   `soort_id` int(11) NOT NULL DEFAULT '0',
-  `lijst` varchar(5) NOT NULL DEFAULT '',
+  `lijst` varchar(15) NOT NULL DEFAULT '',
   `jaar` int(4) NOT NULL DEFAULT '0',
   `bron` varchar(100) NOT NULL DEFAULT '',
   `omschrijving` varchar(100) NOT NULL DEFAULT '',
@@ -258,9 +258,8 @@ INSERT INTO `tijdschrift` (`id`, `tijdschrift`, `waardering`) VALUES
 (7, 'A1', 0),
 (8, 'A2', 0),
 (12, '1001 Songs', 0),
-(9, 'Muziekweb (CDR)', 3),
 (10, "Revolver's Lust for life", 5),
-(11, 'Muziekweb CDR', 0);
+(11, 'Muziekweb CDR', 3);
 
 --
 -- Indexes for dumped tables
