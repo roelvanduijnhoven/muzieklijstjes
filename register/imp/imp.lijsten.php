@@ -29,13 +29,13 @@
 
 		$lijst = addslashes ( $data[0] );
 		$jaar = addslashes ( $data[1] );
-		$bron = addslashes ( $data[3] );
-		$omschrijving = addslashes ( $data[4] );
-		$url = addslashes ( $data[5] );
-		$type = addslashes ( $data[6] );
-		$cannon = addslashes ( $data[7] );
-		$individueel = addslashes ( $data[8] );
-		$soort = addslashes ( $data[9] );
+		$bron = addslashes ( $data[2] );
+		$omschrijving = addslashes ( $data[3] );
+		$url = addslashes ( $data[4] );
+		$type = addslashes ( $data[5] );
+		$cannon = addslashes ( $data[6] );
+		$individueel = addslashes ( $data[7] );
+		$soort = addslashes ( $data[8] );
 
 		if ( isset ( $arrSoort [ $soort ] ) )
 			$soort_id = $arrSoort[ $soort ];
@@ -44,7 +44,7 @@
 
 		if ( empty ( $individueel ) ) $individueel = 0;
 
-		if ( $sql->query ( "INSERT INTO `lijstenB` (`id`, `lijst`, `jaar`, `bron`, `omschrijving`, `url`, `type`, `canon`, `individueel`, `soort_id`) VALUES ('', '".$lijst."', '".$jaar."', '".$bron."', '".$omschrijving."', '".$url."', '".$type."', '" . $cannon . "', " . $individueel . ", " . $soort_id . ")" ) )
+		if ( $sql->query ( "INSERT INTO `lijstenB` (`lijst`, `jaar`, `bron`, `omschrijving`, `url`, `type`, `canon`, `individueel`, `soort_id`) VALUES ('".$lijst."', '".$jaar."', '".$bron."', '".$omschrijving."', '".$url."', '".$type."', '" . $cannon . "', " . $individueel . ", " . $soort_id . ")" ) )
 			$i++;
 	}
 
