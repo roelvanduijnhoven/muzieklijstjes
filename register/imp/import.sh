@@ -6,3 +6,4 @@ docker-compose exec web php register/imp/imp.recensent.php > output/output-recen
 docker-compose exec web php register/imp/imp.rubrieken.php > output/output-rubrieken.html
 docker-compose exec web php register/imp/imp.algemeen.php > output/output-algemeen.html
 docker-compose exec web php register/imp/imp.individueel.php > output/output-lijstenI.html
+docker-compose exec mysql mysqldump -u root --password=password dev > ../../final.sql
