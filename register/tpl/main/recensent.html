@@ -60,18 +60,16 @@
 <br />
 <table width="100%" border="0">
   <tr>
-    <td width="30">Nr</td>
     <td width="150">Bron</td>
     <td width="50">Jaar</td>
     <td width="170">Individuele lijstje(s)</td>
     <td width="300">Gehele muzieklijst </td>
   </tr>
   <tr>
-    <td colspan="5"><hr color="blue" /></td>
+    <td colspan="4"><hr color="blue" /></td>
   </tr>
 <!-- START BLOCK : recensent.individueel.row -->
   <tr>
-    <td>{nr}</td>
     <td>{bron}</td>
     <td>{jaar}</td>
     <td><a href="{url}individueel.php?lijst={lijst_id}&recensent={recensent_id}">link</a></td>
@@ -80,7 +78,7 @@
 <!-- END BLOCK : recensent.individueel.row -->
 <!-- START BLOCK : recensent.individueel.empty -->
    <tr>
-    <td colspan="5">Geen individuele lijstjes aangetroffen</td>
+    <td colspan="4">Geen individuele lijstjes aangetroffen</td>
   </tr>
 <!-- END BLOCK : recensent.individueel.empty -->
 </table>
@@ -90,7 +88,6 @@
 <br>
 <table width="100%"  border="0">
   <tr>
-    <td width="30">Nr</td>
     <td width="255">Artiest<a href="?recensent={recensent_id}&order=artiest">^</a> </td>
     <td width="280">Album<a href="?recensent={recensent_id}&order=album">^</a></td>
     <td width="30">Ts<a href="?recensent={recensent_id}&order=tijdschrift">^</a></td>
@@ -98,11 +95,10 @@
     <td width="45">Verm<a href="?recensent={recensent_id}&order=lijst">^</a></td>
   </tr>
   <tr>
-    <td colspan="6"><hr color=blue></td>
+    <td colspan="5"><hr color=blue></td>
   </tr>
 <!-- START BLOCK : recensent_recensie -->
   <tr>
-    <td>{nr}</td>
     <td><a href="artiest.php?artiest={artiest_id}">{artiest}</a></td>
     <td><a href="album.php?album={album_id}">{album}</a></td>
     <td><acronym title="{tijdschrift}">{aTijdschrift}</acronym></td>

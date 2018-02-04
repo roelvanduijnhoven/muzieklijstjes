@@ -23,12 +23,11 @@
 <br>
 <table width="100%" border="0">
   <tr>
-    <td colspan="6"><strong>Recensies<br>
+    <td colspan="5"><strong>Recensies<br>
       <br>
     </strong></td>
   </tr>
   <tr>
-    <td width="30">Nr</td>
     <td width="30">Ts<a href="{url}album.php?album={album_id}&rOrder=tijdschrift">^</a></td>
     <td width="100">Jaar/Nr<a href="{url}album.php?album={album_id}&rOrder=jaargave">^</a></td>
     <td width="150">Rubriek<a href="{url}album.php?album={album_id}&rOrder=rubriek">^</a></td>
@@ -36,11 +35,10 @@
     <td width="80">Waardering<a href="{url}album.php?album={album_id}&rOrder=waardering">^</a></td>
   </tr>
   <tr>
-    <td colspan="6"><hr color=blue></td>
+    <td colspan="5"><hr color=blue></td>
   </tr>
 <!-- START BLOCK : album_recensie.row -->
   <tr>
-    <td>{nr}</td>
     <td><acronym title="{tijdschrift}">{aTijdschrift}</acronym></td>
     <td><a href="{url}nummer.php?nummer={nummer}&jaar={jaar}&tijdschrift={tijdschrift_id}">{jaar} / {nummer}</a></td>
     <td>{rubriek}</td>
@@ -56,12 +54,11 @@
 <br>
 <table width="100%" border="0">
   <tr>
-    <td colspan="8"><strong>Genoemd in muzieklijstjes<br>
+    <td colspan="7"><strong>Genoemd in muzieklijstjes<br>
       <br>
     </strong></td>
   </tr>
   <tr>
-    <td width="30">Nr</td>
     <td width="85">Bron<a href="{url}album.php?album={album_id}&order=bron">^</a></td>
     <td width="50">Jaar<a href="{url}album.php?album={album_id}&order=jaar">^</a></td>
     <td width="380">Muzieklijstjes<a href="{url}album.php?album={album_id}&order=lijst">^</a></td>
@@ -71,11 +68,10 @@
     <td width="30">gPos</td>
   </tr>
   <tr>
-    <td colspan="8"><hr color=blue></td>
+    <td colspan="7"><hr color=blue></td>
   </tr>
 <!-- START BLOCK : album_lijst.row -->
   <tr>
-    <td>{nr}</td>
     <td><acronym title="{bron}">{aBron}</acronym></td>
     <td>{jaar}</td>
     <td><a href="{url}lijst.php?lijst={lijst_id}">{lijst}</a></td>

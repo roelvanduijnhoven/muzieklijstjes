@@ -28,7 +28,6 @@
 <br>
 <table width="100%"  border="0">
   <tr>
-    <td width="30">#</td>
     <td width="40">Pos<a href="{url}lijst.php?lijst={lijst_id}&order=pos">^</a> </td>
     <td width="240">Artiest<a href="{url}lijst.php?lijst={lijst_id}&order=artiest">^</a> </td>
     <td width="290">Album<a href="{url}lijst.php?lijst={lijst_id}&order=album">^</a> </td>
@@ -36,11 +35,10 @@
     <td width="50">Rec<a href="{url}lijst.php?lijst={lijst_id}&order=recensie">^</a> </td>
   </tr>
   <tr>
-    <td height="21" colspan="6"><hr color=blue></td>
+    <td height="21" colspan="5"><hr color=blue></td>
   </tr>
 <!-- START BLOCK : l.pos.row -->
   <tr>
-    <td>{i}</td>
     <td><strong>{nr}</strong></td>
     <td><a href="{url}artiest.php?artiest={artiest_id}">{artiest}</a></td>
     <td><a href="{url}album.php?album={album_id}">{album}</a></td>
@@ -85,7 +83,6 @@
 <br>
 <table width="100%"  border="0">
   <tr>
-    <td width="30">#</td>
     <td width="40">Pos<a href="{url}lijst.php?lijst={lijst_id}&order=positie">^</a></td>
     <td width="40">AK</td>
     <td width="40">Pt<a href="{url}lijst.php?lijst={lijst_id}&order=punten">^</a></td>
@@ -95,11 +92,10 @@
     <td width="50">Rec<a href="{url}lijst.php?lijst={lijst_id}&order=recensie">^</a></td>
   </tr>
   <tr>
-    <td height="21" colspan="8"><hr color=blue></td>
+    <td height="21" colspan="7"><hr color=blue></td>
   </tr>
 <!-- START BLOCK : l.ak.row -->
   <tr>
-    <td>{i}</td>
     <td><strong>{nr}</strong></td>
     <td><a href="{url}genoemddoor.php?lijst={lijst_id}">{ak}</a></td>
     <td>{punten}</td>
@@ -115,16 +111,14 @@
 </strong><br />
 <table width="100%" border="0">
   <tr>
-    <td width="30">#</td>
     <td width="600">Recensent</td>
     <td width="70">Recensies</td>
   </tr>
   <tr>
-    <td colspan="3"><hr color="blue" /></td>
+    <td colspan="2"><hr color="blue" /></td>
   </tr>
   <!-- START BLOCK : l.ak.deelnemer -->
   <tr>
-    <td>{i}</td>
     <td><a href="{url}recensent.php?recensent={recensent_id}">{recensent}</a></td>
     <td>{nRecensie}</td>
   </tr>
@@ -161,18 +155,16 @@
 <br>
 <table width="100%"  border="0">
   <tr>
-    <td width="30">#</td>
     <td width="300">Artiest<a href="{url}lijst.php?lijst={lijst_id}&order=artiest">^</a> </td>
     <td width="270">Album<a href="{url}lijst.php?lijst={lijst_id}&order=album">^</a> </td>
     <td width="50">Jaar<a href="{url}lijst.php?lijst={lijst_id}&order=jaar">^</a></td>
     <td width="50">Rec<a href="{url}lijst.php?lijst={lijst_id}&order=recensie">^</a> </td>
   </tr>
   <tr>
-    <td height="21" colspan="5"><hr color=blue></td>
+    <td height="21" colspan="4"><hr color=blue></td>
   </tr>
   <!-- START BLOCK : l.gp.row -->
   <tr>
-    <td>{nr}</td>
     <td><a href="{url}artiest.php?artiest={artiest_id}">{artiest}</a></td>
     <td><a href="{url}album.php?album={album_id}">{album}</a></td>
     <td>{jaar}</td>

@@ -4,23 +4,21 @@
 </h2>
 <table width="100%"  border="0">
   <tr>
-    <td colspan="5"><strong>Resultaten: </strong>Er zijn {i_jaar} albums gevonden<strong><br>
+    <td colspan="4"><strong>Resultaten: </strong>Er zijn {i_jaar} albums gevonden<strong><br>
       <br>
     </strong></td>
   </tr>
   <tr>
-    <td width="30">Nr</td>
     <td width="280">Artiest<a href="{url}zoeken/jaar.php?jaar={x_jaar}&order=artiest">^</a></td>
     <td width="290">Album<a href="{url}zoeken/jaar.php?jaar={x_jaar}&order=album">^</a></td>
     <td width="50"><div align="center">Rec<a href="{url}zoeken/jaar.php?jaar={x_jaar}&order=recensies">^</a></div></td>
     <td width="50"><div align="center">Verm<a href="{url}zoeken/jaar.php?jaar={x_jaar}&order=lijsten">^</a></div></td>
   </tr>
   <tr>
-    <td colspan="5"><hr color=blue></td>
+    <td colspan="4"><hr color=blue></td>
   </tr>
 <!-- START BLOCK : album.row -->
   <tr>
-    <td>{nr}</td>
     <td><a href="{url}artiest.php?artiest={artiest_id}">{artiest}</a></td>
     <td><a href="{url}album.php?album={album_id}">{album}</a></td>
     <td><div align="center">{recensies}</div></td>
@@ -29,7 +27,7 @@
 <!-- END BLOCK : album.row -->
 <!-- START BLOCK : album.norow -->
   <tr>
-	<td colspan="5">Er konden geen albums gevonden worden</td>
+	<td colspan="4">Er konden geen albums gevonden worden</td>
   </tr>
 <!-- END BLOCK : album.norow -->
 

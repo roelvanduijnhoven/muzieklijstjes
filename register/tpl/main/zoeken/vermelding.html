@@ -5,23 +5,21 @@
 
 <table width="100%"  border="0">
   <tr>
-    <td colspan="5"><strong>Resultaten:</strong> Er zijn {i_vermelding} albums gevonden<br>
+    <td colspan="4"><strong>Resultaten:</strong> Er zijn {i_vermelding} albums gevonden<br>
       <strong><br>
     </strong></td>
   </tr>
   <tr>
-    <td width="30">Nr</td>
     <td width="270">Artiest<a href="{url}zoeken/vermelding.php?vermelding={vermelding}&order=artiest">^</a></td>
     <td width="280">Album<a href="{url}zoeken/vermelding.php?vermelding={vermelding}&order=album">^</a></td>
     <td width="50">Jaar<a href="{url}zoeken/vermelding.php?vermelding={vermelding}&order=jaar">^</a></td>
     <td width="50">Rec<a href="{url}zoeken/vermelding.php?vermelding={vermelding}&order=recensies">^</a></td>
   </tr>
   <tr>
-    <td colspan="5"><hr color=blue></td>
+    <td colspan="4"><hr color=blue></td>
   </tr>
 <!-- START BLOCK : album.row -->
   <tr>
-    <td>{nr}</td>
     <td><a href="{url}artiest.php?artiest={artiest_id}">{artiest}</a></td>
     <td><a href="{url}album.php?album={album_id}">{album}</a></td>
     <td>{jaar}</td>
@@ -30,7 +28,7 @@
 <!-- END BLOCK : album.row -->
 <!-- START BLOCK : album.norow -->
   <tr>
-	<td colspan="5">Er konden geen albums gevonden worden</td>
+	<td colspan="4">Er konden geen albums gevonden worden</td>
   </tr>
 <!-- END BLOCK : album.norow -->
 
