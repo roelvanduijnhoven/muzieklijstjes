@@ -254,12 +254,12 @@ INSERT INTO `tijdschrift` (`id`, `tijdschrift`, `waardering`) VALUES
 (3, 'Aloha', 5),
 (4, 'Mojo', 5),
 (5, 'Aloha People and Music', 0),
-(6, 'Revolver', 5),
+(6, "Revolver's Lust for Life", 5),
 (7, 'A1', 0),
 (8, 'A2', 0),
-(12, '1001 Songs', 0),
-(10, "Revolver's Lust for life", 5),
-(11, 'Muziekweb CDR', 3);
+(10, "Lust for life", 5),
+(11, 'Muziekweb CDR', 3),
+(12, '1001 Songs', 0);
 
 --
 -- Indexes for dumped tables
