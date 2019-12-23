@@ -19,7 +19,7 @@ FROM
 		LEFT JOIN artiest AS ar ON ar.id = a.artiest_id
 	WHERE
 		album_id = a.id AND
-		lb.lijst IN ('CR21','H30','Hu36','J66','K38','L02','M66','MH23','N78','O96','Q93','RS065','SP31','SZ03','T28','U45') AND
+		lb.lijst IN ('CL11', 'CR23', 'G09', 'H32', 'Hu38', 'J68', 'M69', 'N81', 'O98', 'P29', 'Q97', 'RS069', 'SP33', 'U50', 'W26') AND
 		l.lijst_id = lb.id
 	GROUP BY
 		l.album_id

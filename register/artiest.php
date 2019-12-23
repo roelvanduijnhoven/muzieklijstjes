@@ -10,7 +10,6 @@
 		$tpl->assign ( array (
 			"id" => $_GET['artiest'],
 			"artiest" => $artiest['artiest'],
-			"allMusicArtiest" => str_replace( " ", "|", $artiest['artiest'] )
 		) );
 
 

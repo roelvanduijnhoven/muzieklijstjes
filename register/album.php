@@ -27,12 +27,12 @@
 		{
 			# Statische informatie
 			$album = $sql->fetch_assoc ( $rAlbum );
+
 			$tpl->assign ( array (
 				"album" => $album['album'],
 				"titelnummer" => $album['titelnummer'],
 				"materiaal" => $album['materiaal'],
-				"jaar" => $album['jaar'],
-				"allMusicArtiest" => str_replace ( " ", "|", $album['artiest'] ),
+				"albumJaar" => $album['jaar'],
 
 				"artiest_id" => $album['artiest_id'],
 				"artiest" => ( $album['artiest_id'] == 0 ) ? "#" : $album['artiest'],
