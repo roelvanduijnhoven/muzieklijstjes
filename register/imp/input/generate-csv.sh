@@ -8,3 +8,4 @@ sed -i '1d' lijstenB.csv
 sed -i '1d' lijstenI.csv
 sed -i '1d' algemeen.csv
 sed -i '1d' recensenten.csv
+sed -i '1d' rubrieken.csv
