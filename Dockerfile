@@ -12,9 +12,9 @@ RUN \
 RUN docker-php-ext-install mysql
 
 # XDebug
-RUN pecl install -o -f xdebug \
- && rm -rf /tmp/pear \
- && echo "zend_extension=/usr/local/lib/php/extensions/no-debug-non-zts-20131226/xdebug.so" > /usr/local/etc/php/conf.d/xdebug.ini
+# RUN pecl install -o -f xdebug \
+#  && rm -rf /tmp/pear \
+#  && echo "zend_extension=/usr/local/lib/php/extensions/no-debug-non-zts-20131226/xdebug.so" > /usr/local/etc/php/conf.d/xdebug.ini
 
 RUN echo 'include=/usr/local/etc/php-fpm/conf.d/*' >> /usr/local/etc/php-fpm.conf \
     && mkdir -p /usr/local/etc/php-fpm/conf.d/
