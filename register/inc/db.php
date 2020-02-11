@@ -3,6 +3,6 @@
 
 	$sql = new mysql;
 
-	$sql->connect ( "mysql", "user", "password" ); // localhost is hoogstwaarschijnlijk al goed
-	$sql->select_db ( "dev" );					// deze is hoogstwaarschijnlijk 'register'
+	$sql->connect ( getenv('MYSQL_HOSTNAME'), getenv('MYSQL_USERNAME'), getenv('MYSQL_PASSWORD')); // localhost is hoogstwaarschijnlijk al goed
+	$sql->select_db ( getenv('MYSQL_DATABASE') );
 	$sql->query("SET NAMES utf8");

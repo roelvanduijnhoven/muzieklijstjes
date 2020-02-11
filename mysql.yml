@@ -1,0 +1,89 @@
+## Zou nog backed moeten worden door persistent data oplossing van Digital Ocean.
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: muzieklijstjes-mysql
+  labels:
+    app: mysql
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+        app: mysql
+  template:
+    metadata:
+      labels:
+        app: mysql
+    spec:
+      containers:
+      - name: mysql
+        image: mysql:5.6
+        ports:
+        - containerPort: 3306
+        env:
+        - name: MYSQL_ROOT_PASSWORD
+          value: "ikmoetnogeensecretworden"
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: mysql
+spec:
+  selector:
+    app: mysql
+  ports:
+  - port: 3306
+
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: phpmyadmin
+  labels:
+    app: phpmyadmin
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+        app: phpmyadmin
+  template:
+    metadata:
+      labels:
+        app: phpmyadmin
+    spec:
+      containers:
+      - name: phpmyadmin
+        image: phpmyadmin/phpmyadmin:5.0
+        ports:
+        - containerPort: 80
+        env:
+        - name: PMA_HOST
+          value: "mysql.default.svc.cluster.local"         
+        volumeMounts:
+        - name: php-config
+          mountPath: /usr/local/etc/php/conf.d/custom-upload-limit.ini
+          subPath: custom-upload-limit.ini
+      volumes:
+      - name: php-config
+        configMap:
+          name: phpmyadmin-php-config
+
+---
+
+kind: ConfigMap
+apiVersion: v1
+metadata:
+  name: phpmyadmin-php-config
+data:
+  # See https://github.com/phpmyadmin/docker/issues/237#issuecomment-531368192
+  custom-upload-limit.ini: |-
+    file_uploads = On
+    memory_limit = 512M
+    upload_max_filesize = 512M
+    post_max_size = 512M
+    max_execution_time = 600
+  

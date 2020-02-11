@@ -1,0 +1,45 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: muzieklijstjes-deployment
+  labels:
+    app: muzieklijstjes
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+        app: muzieklijstjes
+  template:
+    metadata:
+      labels:
+        app: muzieklijstjes
+    spec:
+      containers:
+      - name: muzieklijstjes
+        image: roelvd/muzieklijstjes.nl:latest
+        ports:
+        - containerPort: 80
+        env:
+          - name: MYSQL_HOSTNAME
+            value: "mysql.default.svc.cluster.local"         
+          - name: MYSQL_USERNAME
+            value: "muzieklijstjes"
+          - name: MYSQL_PASSWORD
+            value: "MoKniByWiWzyVwDn"
+          - name: MYSQL_DATABASE
+            value: 'muzieklijstjes'
+        
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: muzieklijstjes
+spec:
+  selector:
+    app: muzieklijstjes
+  type: NodePort
+  ports:
+  - port: 80
+    nodePort: 31443

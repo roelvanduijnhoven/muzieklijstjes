@@ -1,10 +1,11 @@
 <?php
 
+// Make everything relative to the root
+chdir(dirname(__DIR__));
+
 	header('Content-Type: text/html; charset=utf-8');
 
-	$rel = "http://localhost/register/";
-	$abs = $_SERVER['DOCUMENT_ROOT'] . "/register/";
-
+	$rel = "http://64.225.65.123:31443/";
 
 	# Hier komt het cache-meganisme
 
@@ -29,7 +30,7 @@
 
 		$file_name = $_SERVER['PHP_SELF'];
 		$hash = md5 ( $file_name . $postget );
-		$file_location = $abs . "cache/" . $hash . ".txt";
+		$file_location = "cache/" . $hash . ".txt";
 
 		if ( file_exists ( $file_location ) )
 		{
@@ -48,7 +49,7 @@
 
 
 	## Include functies
-	include $abs . "inc/func.php";
+	include "inc/func.php";
 
 
 	## Start timer
@@ -56,8 +57,8 @@
 
 
 	## Connect met de database en start de template class
-	include $abs . "inc/db.php";
-	include $abs . "inc/template.php";
+	include "inc/db.php";
+	include "inc/template.php";
 
 
 	## Pagina opbouwen
@@ -72,13 +73,13 @@
 	}
 
 	if ( empty ( $globalTemplate ) )
-		$tpl = new TemplatePower ( $abs . "tpl/" . $template . ".html" );
+		$tpl = new TemplatePower ( "tpl/" . $template . ".html" );
 	else
 	{
-		$tpl = new TemplatePower ( $abs . "tpl/" . $globalTemplate . "global.html" );
+		$tpl = new TemplatePower ( "tpl/" . $globalTemplate . "global.html" );
 
 
-		$tpl->assigninclude ( "include", $abs . "tpl/" . $globalTemplate . $template . ".html" );
+		$tpl->assigninclude ( "include", "tpl/" . $globalTemplate . $template . ".html" );
 	}
 
 	$tpl->prepare ( );

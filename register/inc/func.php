@@ -13,7 +13,7 @@
 
 	function output_page ( )
 	{
-		global $abs, $tpl, $pageTmr, $sql, $_CACHE;
+		global $tpl, $pageTmr, $sql, $_CACHE;
 
 		$tpl->gotoBlock ( "_ROOT" );
 
@@ -38,7 +38,7 @@
 
 			# Cache deze pagina
 			$html = $tpl->getOutputContent ( );
-			$file = $abs . "cache/" . $_CACHE['file_hash'] . ".txt";
+			$file = "cache/" . $_CACHE['file_hash'] . ".txt";
 
 			$handle = fopen ( $file, 'w' );
 			fwrite ( $handle, $html );
