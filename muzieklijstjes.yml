@@ -28,6 +28,8 @@ spec:
             value: "MoKniByWiWzyVwDn"
           - name: MYSQL_DATABASE
             value: 'muzieklijstjes'
+          - name: URL
+            value: 'http://musiclists.nl/'
         
 
 ---

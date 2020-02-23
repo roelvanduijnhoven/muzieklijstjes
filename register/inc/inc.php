@@ -5,7 +5,7 @@ chdir(dirname(__DIR__));
 
 	header('Content-Type: text/html; charset=utf-8');
 
-	$rel = "http://64.225.65.123:31443/";
+	$rel = getenv('URL');
 
 	# Hier komt het cache-meganisme
 
