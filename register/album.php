@@ -97,7 +97,7 @@
 						"nr" => ++$i,
 
 						"tijdschrift_id" => $recensie['tijdschrift_id'],
-						"aTijdschrift" => substr ( $recensie['tijdschrift'], 0, 1 ),
+						"aTijdschrift" => substr ( $recensie['tijdschrift'], 0, 3 ),
 						"tijdschrift" => $recensie['tijdschrift'],
 
 						"nummer" => $recensie['nummer'],

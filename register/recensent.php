@@ -172,7 +172,7 @@
 						 "jaar" => $titel['jaar'],
 						 "tijdschrift_id" => $titel['tijdschrift_id'],
 						 "lijsten" => not_null ( $titel['lijsten'] ),
-						 "aTijdschrift" => substr ( $titel['tijdschrift'], 0, 1 ),
+						 "aTijdschrift" => substr ( $titel['tijdschrift'], 0, 3 ),
 						 "tijdschrift" => $titel['tijdschrift'],
 
 						"artiest_id" => $titel['artiest_id'],

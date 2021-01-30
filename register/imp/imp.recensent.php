@@ -1,5 +1,5 @@
 <?
-	$recensentenFile = __DIR__ . "/recensenten.csv";
+	$recensentenFile = __DIR__ . "/input/recensenten.csv";
 	$genresFile = __DIR__ . "/genres.csv";
 	$kenmerkenFile = __DIR__ . "/kenmerken.csv";
 
@@ -68,12 +68,12 @@
 	{
 		$data = explode ( "\t", $data );
 
-		$recensent = addslashes ( $data[4] );
-		$sRecensent = addslashes ( $data[5] );
-		$aRecensent = addslashes ( $data[3] );
-		$url = addslashes ( $data[6] );
-		$genres = addslashes ( $data[7] );
-		$kenmerken = addslashes ( $data[8] );
+		$recensent = addslashes ( $data[2] );
+		$sRecensent = addslashes ( $data[3] );
+		$aRecensent = addslashes ( $data[1] );
+		$url = addslashes ( $data[4] );
+		$genres = addslashes ( $data[5] );
+		$kenmerken = addslashes ( $data[6] );
 
 		if ( $sql->query ( " INSERT INTO `recensent` (`recensent`, `sRecensent`, `aRecensent`, `url`) VALUES ('" . $recensent . "', '" . $sRecensent . "', '". $aRecensent ."', '" . $url . "')" ) )
 			$i++;

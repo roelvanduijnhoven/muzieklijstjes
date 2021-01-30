@@ -3,7 +3,7 @@
 	set_time_limit ( 0 );
 	ini_set('memory_limit', '400M');
 
-	$file = __DIR__ . "/lijstenI.csv";
+	$file = __DIR__ . "/input/lijstenI.csv";
 
 	# MySql
 	include "db.php";

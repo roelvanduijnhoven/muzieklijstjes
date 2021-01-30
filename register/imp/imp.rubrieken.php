@@ -1,5 +1,5 @@
 <?
-	$file = __DIR__ . "/rubrieken.csv";
+	$file = __DIR__ . "/input/rubrieken.csv";
 
 	# MySql
 	include "db.php";
@@ -34,6 +34,11 @@
 		$aRubriek = addslashes ( $data[0] );
 		$rubriek = addslashes ( $data[1] );
 		$tijdschrift = addslashes ( $data[2] );
+
+		# As of 30 january of 2021 we don't take Muziekweb into account anymore
+		if ($aRubriek === 'c') {
+			continue;
+		}
 
 		if ( isset ( $tijdschriftArr [ $index ] ) )
 			$tijdschrift = $tijdschriftArr [ $index ];
