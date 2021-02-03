@@ -132,12 +132,6 @@
 		$rubriek_id = $rubriekArr[ strtolower ( $rubriek ) ];
 		$titelnummer = str_replace ( "Onbekend", "", $titelnummer );
 
-
-		# As of 30 january of 2021 we don't take Muziekweb into account anymore
-		if ($tijdschrift_id == 11) {
-			continue;
-		}
-
 		# Kijk of het individueel lijstje is, zoja zet AK op 0 zodat naderhand real-time de echte AK berekend kan worden.
 		if ( $lijstArr [ $lijst ]['individueel'] > 0 )
 			$ak = 0;
