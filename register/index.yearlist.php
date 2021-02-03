@@ -24,7 +24,7 @@ FROM
 		l.lijst_id = lb.id
 	GROUP BY
 		l.album_id
-	ORDER BY AK DESC
+	ORDER BY AK DESC, album ASC
 	LIMIT 0, 15
 ) AS maintable";
 
